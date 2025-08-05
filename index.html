@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodBeats – AI-Powered Music for Every Emotion</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated Background Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-music"></i>
+        <span>MoodBeats</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#moods">Moods</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-toggle" id="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-sparkles"></i>
+        <!-- <span>Powered by Advanced AI</span> -->
+      </div>
+      <h1>
+        <span class="gradient-text">MoodBeats</span>
+        <span class="typing-animation" id="typing-text"></span>
+      </h1>
+      <p class="hero-subtitle">AI-powered music curation that understands your emotions. Discover the perfect soundtrack for every moment of your life.</p>
+      <div class="hero-buttons">
+        <a href="#moods" class="cta-button primary">
+          <span>Start Your Journey</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#features" class="cta-button secondary">
+          <i class="fas fa-play"></i>
+          <span>Watch Demo</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item" data-count="10000000">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Songs Curated</div>
+        </div>
+        <div class="stat-item" data-count="500000">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Happy Users</div>
+        </div>
+        <div class="stat-item" data-count="99">
+          <div class="stat-number">0</div>
+          <div class="stat-label">% Satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="music-visualizer">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-music-note">♪</div>
+        <div class="floating-music-note">♫</div>
+        <div class="floating-music-note">♪</div>
+        <div class="floating-music-note">♫</div>
+        <div class="floating-music-note">♬</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features fade-in" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose MoodBeats?</h2>
+        <p class="section-subtitle">Experience the future of personalized music curation</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-tilt>
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Mood-Based AI</h3>
+          <p>Our advanced AI analyzes your emotional state and curates the perfect playlist to match or enhance your mood.</p>
+          <div class="feature-badge">AI Powered</div>
+          <div class="feature-animation">
+            <div class="pulse-ring"></div>
+          </div>
+        </div>
+        <div class="feature-card" data-tilt>
+          <div class="feature-icon">
+            <i class="fas fa-music"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Premium Playlists</h3>
+          <p>Hand-picked tracks from Spotify's vast library, carefully selected by music experts and refined by user feedback.</p>
+          <div class="feature-badge">Curated</div>
+          <div class="feature-animation">
+            <div class="pulse-ring"></div>
+          </div>
+        </div>
+        <div class="feature-card" data-tilt>
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Instant Access</h3>
+          <p>Get your personalized playlist in seconds. No long surveys, no complex setup - just pure musical magic.</p>
+          <div class="feature-badge">Lightning Fast</div>
+          <div class="feature-animation">
+            <div class="pulse-ring"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mood Selector Section -->
+  <section class="mood-selector fade-in" id="moods">
+    <div class="container">
+      <div class="mood-intro">
+        <h2>How are you feeling today?</h2>
+        <p>Select your current mood and let us create the perfect musical atmosphere for you.</p>
+      </div>
+      <div class="moods-grid">
+        <div class="mood-card" onclick="selectMood('Happy')" data-mood="Happy">
+          <div class="mood-icon">😊</div>
+          <h3>Happy</h3>
+          <p>Upbeat and energetic tracks to amplify your joy</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+        <div class="mood-card" onclick="selectMood('Calm')" data-mood="Calm">
+          <div class="mood-icon">🌿</div>
+          <h3>Calm</h3>
+          <p>Peaceful melodies for relaxation and mindfulness</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+        <div class="mood-card" onclick="selectMood('Focus')" data-mood="Focus">
+          <div class="mood-icon">🎯</div>
+          <h3>Focus</h3>
+          <p>Instrumental beats for concentration and productivity</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+        <div class="mood-card" onclick="selectMood('Heartbroken')" data-mood="Heartbroken">
+          <div class="mood-icon">💙</div>
+          <h3>Melancholy</h3>
+          <p>Emotional ballads for introspective moments</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+        <div class="mood-card" onclick="selectMood('Workout')" data-mood="Workout">
+          <div class="mood-icon">💪</div>
+          <h3>Workout</h3>
+          <p>High-energy tracks to fuel your fitness journey</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+        <div class="mood-card" onclick="selectMood('Party')" data-mood="Party">
+          <div class="mood-icon">🎉</div>
+          <h3>Party</h3>
+          <p>Dance hits and crowd favorites for celebrations</p>
+          <div class="mood-overlay"></div>
+          <div class="mood-particles"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Playlist Section -->
+  <section class="playlist-section" id="playlist">
+    <div class="container">
+      <div class="loading" id="loading">
+        <div class="spinner-container">
+          <div class="spinner"></div>
+          <div class="loading-waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+        </div>
+        <p>Curating your perfect playlist...</p>
+        <div class="loading-progress">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+      <div class="playlist-container" id="playlist-container" style="display: none;">
+        <h2 class="playlist-title" id="playlist-title"></h2>
+        <div class="playlist-wrapper">
+          <iframe
+            id="playlist-frame"
+            class="playlist-frame"
+            src=""
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media">
+          </iframe>
+        </div>
+        <div class="playlist-stats">
+          <div class="stat-item">
+            <div class="stat-number" id="track-count">25</div>
+            <div class="stat-label">Tracks</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="duration">90</div>
+            <div class="stat-label">Minutes</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="mood-match">97</div>
+            <div class="stat-label">% Mood Match</div>
+          </div>
+        </div>
+        <div class="playlist-actions">
+          <button class="action-btn" onclick="sharePlaylist()">
+            <i class="fas fa-share"></i>
+            <span>Share</span>
+          </button>
+          <button class="action-btn" onclick="refreshPlaylist()">
+            <i class="fas fa-refresh"></i>
+            <span>Refresh</span>
+          </button>
+          <button class="action-btn" onclick="savePlaylist()">
+            <i class="fas fa-heart"></i>
+            <span>Save</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What Our Users Say</h2>
+        <p class="section-subtitle">Join thousands of music lovers who've found their perfect soundtrack</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"MoodBeats perfectly captures how I'm feeling and gives me exactly what I need to hear. It's like having a personal DJ who knows my soul."</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5e0?w=100&h=100&fit=crop&crop=face" alt="Sarah M." />
+              </div>
+              <div class="author-info">
+                <h4>Sarah M.</h4>
+                <span>Music Enthusiast</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"The AI is incredibly accurate. Whether I need focus music for work or chill vibes for relaxation, MoodBeats delivers every time."</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Mike R." />
+              </div>
+              <div class="author-info">
+                <h4>Mike R.</h4>
+                <span>Software Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"I discovered so many new artists through MoodBeats. It's expanded my musical horizons while staying true to my emotional needs."</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Emma L." />
+              </div>
+              <div class="author-info">
+                <h4>Emma L.</h4>
+                <span>Artist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <button class="nav-btn prev" onclick="slideTestimonials(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nav-btn next" onclick="slideTestimonials(1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay in the Beat</h2>
+        <p>Get the latest updates on new features, mood-based playlists, and exclusive content.</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">
+            <span>Subscribe</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-music"></i>
+            <span>MoodBeats</span>
+          </div>
+          <p>AI-powered music curation for every emotion. Discover your perfect soundtrack.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#moods">Mood Selection</a></li>
+            <li><a href="#playlist">Playlists</a></li>
+            <li><a href="#">Premium</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MoodBeats. All rights reserved. | Powered by Spotify API</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
